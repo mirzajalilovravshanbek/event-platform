@@ -298,23 +298,15 @@ npm install
 Loyiha root’ida `.env` fayl yarating:
 
 ```env
-# App
-PORT=3000
-NODE_ENV=development
-
-# Database
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=123456
-DB_NAME=event_platform
+DB_NAME=events_db
 
-# JWT
 JWT_SECRET=supersecret
-JWT_EXPIRES_IN=1h
+RABBIT_URL=amqp://localhost
 
-# RabbitMQ
-RABBITMQ_URL=amqp://localhost:5672
 ```
 
 ---
@@ -322,7 +314,7 @@ RABBITMQ_URL=amqp://localhost:5672
 ### 4. PostgreSQL’da database yaratish
 
 ```sql
-CREATE DATABASE event_platform;
+CREATE DATABASE events_db;
 ```
 
 ---
@@ -368,3 +360,4 @@ Test rejimida:
 * Auth guard bypass qilinadi
 * Background worker’lar ishga tushmaydi
 * E2E testlar deterministic ishlaydi
+
